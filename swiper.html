@@ -10,40 +10,40 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
-<body class="flex justify-center h-screen items-center bg-gray-200">
-	<div class="w-1/2">
+<body class="flex justify-center h-screen items-center bg-gray-200 p-6">
+	<div class="w-full md:w-1/2">
 		<!-- Slider main container -->
 		<div id="swiper" class="swiper pb-10">
 			<!-- Additional required wrapper -->
 			<div class="swiper-wrapper">
 				<!-- Slides -->
 				<div class="swiper-slide">
-					<img
+					<img class="w-full"
 						src="https://habrastorage.org/getpro/moikrug/uploads/company/218/645/913/logo/medium_a68ad9662fbc4b06311a7297c5321cdf.png"
 						alt="slide 1" />
 				</div>
 				<div class="swiper-slide">
-					<img
+					<img class="w-full"
 						src="https://habrastorage.org/getpro/moikrug/uploads/company/218/645/913/logo/medium_a68ad9662fbc4b06311a7297c5321cdf.png"
 						alt="slide 2" />
 				</div>
 				<div class="swiper-slide">
-					<img
+					<img class="w-full"
 						src="https://habrastorage.org/getpro/moikrug/uploads/company/218/645/913/logo/medium_a68ad9662fbc4b06311a7297c5321cdf.png"
 						alt="slide 3" />
 				</div>
 				<div class="swiper-slide">
-					<img
+					<img class="w-full"
 						src="https://habrastorage.org/getpro/moikrug/uploads/company/218/645/913/logo/medium_a68ad9662fbc4b06311a7297c5321cdf.png"
 						alt="slide 4" />
 				</div>
 				<div class="swiper-slide">
-					<img
+					<img class="w-full"
 						src="https://habrastorage.org/getpro/moikrug/uploads/company/218/645/913/logo/medium_a68ad9662fbc4b06311a7297c5321cdf.png"
 						alt="slide 5" />
 				</div>
 				<div class="swiper-slide">
-					<img
+					<img class="w-full"
 						src="https://habrastorage.org/getpro/moikrug/uploads/company/218/645/913/logo/medium_a68ad9662fbc4b06311a7297c5321cdf.png"
 						alt="slide 6" />
 				</div>
@@ -57,10 +57,19 @@
 	import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
 	new Swiper('#swiper', {
-		slidesPerView: 3,
+		slidesPerView: 1,
+		spaceBetween: 16,
 		pagination: {
 			el: '.swiper-pagination'
 		},
+		breakpoints: {
+			767: {
+				slidesPerView: 3
+			},
+			576: {
+				slidesPerView: 2
+			}
+		}
 	})
 </script>
 
