@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+	<main class="w-full flex justify-center p-4">
+		<div class="flex-col w-full sm:flex-row max-w-[540px] flex gap-5">
+			<div class="flex flex-col gap-y-4 md:w-40">
+				<select id="kind-select" class="border rounded-md p-1" name="kind">
+					<option selected disabled>Вид вклада</option>
+					<option value="пополняемый">Пополняемый</option>
+					<option value="срочный">Срочный</option>
+				</select>
+				<select id="time-select" class="border rounded-md p-1" disabled name="time">
+					<option selected disabled>Срок вклада</option>
+				</select>
+				<input id="sum" type="number" value="" class="p-1 border rounded-md" disabled placeholder="Сумма, руб." />
+			</div>
+			<div id="output-box" class="md:w-[320px] h-60 grid place-items-center w-full border p-6 [&_p]:text-center"></div>
+		</div>
+	</main>
+</body>
+<script src="./calculator.js"></script>
+
+</html>
